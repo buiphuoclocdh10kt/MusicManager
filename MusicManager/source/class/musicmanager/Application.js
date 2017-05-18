@@ -55,74 +55,56 @@ qx.Class.define("musicmanager.Application",
 	  // Document is the application root
       var doc = this.getRoot();
 	  
+	  //create groupBox and gridLayout
 	  var groupBoxMusicSong = new qx.ui.groupbox.GroupBox("SongManager");
-      groupBoxMusicSong.setWidth(320);
+      groupBoxMusicSong.setWidth(1000);
       doc.add(groupBoxMusicSong, {left: 10, top: 10});
       var gridMusicSong = new qx.ui.layout.Grid();
       gridMusicSong.setSpacing(5);
-      gridMusicSong.setColumnAlign(0, "left", "middle")
+	  gridMusicSong.setSpacingX(10);
       groupBoxMusicSong.setLayout(gridMusicSong);
 	  
+	  //create button, label, textField
 	  var labelName = new qx.ui.basic.Label("Name: ");
 	  groupBoxMusicSong.add(labelName, {row:0, column:0});
 	  
 	  var textFieldName= new qx.ui.form.TextField("");
 	  groupBoxMusicSong.add(textFieldName,{row:0, column:1});
+	  textFieldName.setRequired(true);
 	  
 	  var labelAuthor = new qx.ui.basic.Label("Author: ");
 	  groupBoxMusicSong.add(labelAuthor,{row:0, column:2});
 	  
 	  var textFieldAuthor= new qx.ui.form.TextField("");
-	  groupBoxMusicSong.add(textFieldAuthor,{row:, column:3});
+	  groupBoxMusicSong.add(textFieldAuthor,{row:0, column:3});
 	  
 	  var labelSearch = new qx.ui.basic.Label("Search: ");
-	  groupBoxMusicSong.add(labelSearch,{row:0, column:4});
+	  groupBoxMusicSong.add(labelSearch,{row:1, column:0});
 	  
 	  var textFieldSearch= new qx.ui.form.TextField("");
-	  groupBoxMusicSong.add(textFieldSearch,{row:0, column:5});
+	  groupBoxMusicSong.add(textFieldSearch,{row:1, column:1,colSpan:3});
 	  
 	  var buttonSearch = new qx.ui.form.Button("Search");
-	  groupBoxMusicSong.add(buttonSearch,{row:2, column:2});
+	  groupBoxMusicSong.add(buttonSearch,{row:1, column:4});
 	  
-	  var buttonAdd = new qx.ui.form.Button("Add    ", "musicmanager/test.png");
-	  groupBoxMusicSong.add(buttonAdd,{row:3, column:0});
+	  var buttonAdd = new qx.ui.form.Button("Add    ", "musicmanager/.png");
+	  groupBoxMusicSong.add(buttonAdd,{row:0, column:4});
 	  
-	  var buttonDelete = new qx.ui.form.Button("Delete ", "musicmanager/test.png");
-	  groupBoxMusicSong.add(buttonDelete,{row:3, column:1});
+	  var buttonDelete = new qx.ui.form.Button("Delete ", "musicmanager/.png");
+	  groupBoxMusicSong.add(buttonDelete,{row:0, column:5});
 	  
-	  var buttonSignIn = new qx.ui.form.Button("Sign in", "musicmanager/test.png");
-	  groupBoxMusicSong.add(buttonSignIn,{row:3, column:2});
+	  var buttonSignIn = new qx.ui.form.Button("Sign in", "musicmanager/.png");
+	  groupBoxMusicSong.add(buttonSignIn,{row:0, column:6});
 	  
+	  //create table and simple data 
 	  var tableSongModel = new qx.ui.table.model.Simple();
 	  tableSongModel.setColumns(["Name", "Author"]);
 	  tableSongModel.setData([["My love", "West Life"],["One Love","A1"],["Yesterday Once More", "Carpenter Brothers"]]);
 	  var tableSong = new qx.ui.table.Table(tableSongModel);
-	  groupBoxMusicSong.add(tableSong,{row:4, column:0,colSpan: 3});
+	  groupBoxMusicSong.add(tableSong,{row:2, column:0,colSpan: 55});
+	  tableSong.setColumnWidth(0, 494);
+	  tableSong.setColumnWidth(1, 495); 
 	  
-
-      // Create a button
-	  
-	  
-	  
-	  
-	  
-	  
-      
-	  
-	  
-	  
-	  //add the table
-	  
-	  
-	  //tableSong.setWidth(300);
-	  //tableSong.setHeight(200);
-	  textFieldName.setRequired(true);
-	  
-
-      // Add button to document at fixed coordinates
-	  
-	  
-
       // Add an event listener
       buttonAdd.addListener("execute", function(e) {
         alert("Hello World!");
