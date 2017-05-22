@@ -60,12 +60,15 @@ qx.Class.define("musicmanager.Application",
 	  
 	  //create groupBox and gridLayout
 	  var groupBoxMusicSong = new qx.ui.groupbox.GroupBox("SongManager");
-      groupBoxMusicSong.setWidth(1000);
+      groupBoxMusicSong.setWidth(1880);
+	  groupBoxMusicSong.setHeight(950);
       doc.add(groupBoxMusicSong, {left: 20, top: 35});
       var gridMusicSong = new qx.ui.layout.Grid();
       gridMusicSong.setSpacing(5);
 	  gridMusicSong.setSpacingX(10);
       groupBoxMusicSong.setLayout(gridMusicSong);
+	  //gridMusicSong.setRowFlex(1, 1);
+	  //gridMusicSong.setColumnFlex(1, 1);
 	  
 	  //create button, label, textField
 	  var labelName = new qx.ui.basic.Label("Name: ");
@@ -82,13 +85,13 @@ qx.Class.define("musicmanager.Application",
 	  groupBoxMusicSong.add(textFieldAuthor,{row:0, column:3});
 	  
 	  var labelSearch = new qx.ui.basic.Label("Search: ");
-	  groupBoxMusicSong.add(labelSearch,{row:1, column:0});
+	  groupBoxMusicSong.add(labelSearch,{row:0, column:20});
 	  
 	  var textFieldSearch= new qx.ui.form.TextField("");
-	  groupBoxMusicSong.add(textFieldSearch,{row:1, column:1,colSpan:3});
+	  groupBoxMusicSong.add(textFieldSearch,{row:0, column:21,colSpan: 25});
 	  
 	  var buttonSearch = new qx.ui.form.Button("Search", "musicmanager/search.png");
-	  groupBoxMusicSong.add(buttonSearch,{row:1, column:4});
+	  groupBoxMusicSong.add(buttonSearch,{row:0, column:46});
 	  
 	  var buttonAdd = new qx.ui.form.Button("Add    ", "musicmanager/add.png");
 	  groupBoxMusicSong.add(buttonAdd,{row:0, column:4});
@@ -102,12 +105,14 @@ qx.Class.define("musicmanager.Application",
 	  
 	  //create table and simple data 
 	  var tableSongModel = new qx.ui.table.model.Simple();
-	  tableSongModel.setColumns(["Name", "Author"]);
-	  tableSongModel.setData([["My love", "West Life"],["One Love","A1"],["Yesterday Once More", "Carpenter Brothers"]]);
+	  tableSongModel.setColumns(["ID","Name", "Author","Status"]);
+	  tableSongModel.setData([["1","My love", "West Life","Public"],["2","One Love","A1","Private"],["3","Yesterday Once More", "Carpenter Brothers","Private"]]);
 	  var tableSong = new qx.ui.table.Table(tableSongModel);
-	  groupBoxMusicSong.add(tableSong,{row:2, column:0,colSpan: 55});
-	  tableSong.setColumnWidth(0, 550);
-	  tableSong.setColumnWidth(1, 499); 
+	  groupBoxMusicSong.add(tableSong,{row:2, column:0,colSpan: 126});
+	  tableSong.setColumnWidth(1, 770);
+	  tableSong.setColumnWidth(2, 719);
+	  tableSong.setColumnWidth(3, 270);	  
+	  tableSong.setHeight(800);
 	  tableSong.setContextMenu(this.getContextMenu());
 
       // binding /////////////////////////
