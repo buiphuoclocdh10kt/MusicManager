@@ -1,0 +1,25 @@
+package main;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		EmployeeService employeeService = (EmployeeService) context.getBean("simpleServiceProxy");
+		System.out.println(employeeService.printDetail());
+
+		try {
+			employeeService.checkName();
+		} catch (Exception e) {
+			System.out.println("SimpleService: Method checkName() exception thrown..");
+		}
+
+		employeeService.sayHello("Javacodegeeks");
+		((ConfigurableApplicationContext) context).close();
+
+	}
+
+}

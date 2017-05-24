@@ -1,0 +1,9 @@
+contextsDir=C\:\\apache-tomcat-7.0.77\\conf\\Catalina\\localhost
+eclipse.preferences.version=1
+managerUrl=http\://localhost\:8080/manager
+projectsInSourcePath=Example;MusicManager;
+tomcatBase=C\:\\apache-tomcat-7.0.77
+tomcatConfigFile=C\:\\apache-tomcat-7.0.77\\conf\\server.xml
+tomcatDir=C\:\\apache-tomcat-7.0.77
+tomcatJRE=1495537617732
+tomcatVersion=tomcatV7

@@ -1,0 +1,10 @@
+
+public class PartTimeEmployee implements Employee {
+
+	@Override
+	public String showDetail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
