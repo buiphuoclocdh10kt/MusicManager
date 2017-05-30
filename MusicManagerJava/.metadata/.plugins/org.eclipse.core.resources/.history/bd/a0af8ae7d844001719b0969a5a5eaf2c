@@ -1,0 +1,44 @@
+package model;
+
+
+import org.hibernate.engine.spi.SessionOwner;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		
+		
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("BeanLocations.xml");
+
+		    	SongBo songBo = (SongBo) appContext.getBean("songBoImplement");
+
+		    	/** insert **/
+//		    	Song song = new Song();
+//		     	song.setName("Trả Lại Thời Gian");
+//		    	song.setAuthor("Thanh Sơn");
+//		    	songBo.add(song);
+
+		    	  
+		    	Song song = songBo.findByName("Cát Bụi");
+		    	System.out.println(song);
+		    	song.setName("Thôi");
+		    	song.setAuthor("Thanh Sơn");
+		    	songBo.update(song);
+
+		    	
+//		    	songBo.delete(song);
+		    	
+		    	
+
+			
+
+		    	System.out.println("Done");
+		    
+
+	}
+
+}

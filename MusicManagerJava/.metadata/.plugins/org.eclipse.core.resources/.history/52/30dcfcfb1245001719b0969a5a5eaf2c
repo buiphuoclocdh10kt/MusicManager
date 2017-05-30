@@ -1,0 +1,47 @@
+package model;
+
+import static org.junit.Assert.*;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MusicDAOImplementTest {
+
+	@Test
+	public void testAdd() {
+		
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("BeanLocations.xml");
+
+		MusicService musicService = (MusicService) appContext.getBean("simpleServiceProxy");
+		Calendar calendar = Calendar.getInstance();
+		Date currentTime = calendar.getTime();
+
+		Song song = new Song();
+		assertNotNull(song);
+		song.setName("Trả Lại Thời Gian");
+		song.setAuthor("Thanh Sơn");
+		song.setDate(currentTime);
+		musicService.add(song);
+		//assertNotNull(song);
+	}
+
+	@Test
+	public void testUpdate() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelete() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testFindByName() {
+		fail("Not yet implemented");
+	}
+
+}

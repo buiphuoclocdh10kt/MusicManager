@@ -1,0 +1,45 @@
+package model;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		
+		
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("BeanLocations.xml");
+
+		    	SongBo songBo = (SongBo) appContext.getBean("simpleServiceProxy");
+
+		    	/** insert **/
+//		    	Song song = new Song();
+//		     	song.setName("Trả Lại Thời Gian");
+//		    	song.setAuthor("Thanh Sơn");
+//		    	songBo.add(song);
+
+		    	  
+		    	Song song = songBo.findByName("Trả Lại Thời Gian");
+		    	
+		    	System.out.println(song);
+		    	song.setName("Thoi");
+		    	song.setAuthor("Thanh Sơn");
+		    	songBo.update(song);
+
+		    	  
+		    	 
+		    	//songBo.delete(song);
+		    	
+		    	//session.persist(newSong);// persisting the object
+
+			
+
+		    	System.out.println("Done");
+		    
+
+	}
+
+}

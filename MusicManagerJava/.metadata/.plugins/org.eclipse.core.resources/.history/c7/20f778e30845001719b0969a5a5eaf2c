@@ -1,0 +1,50 @@
+package model;
+
+
+import org.hibernate.FlushMode;
+import org.hibernate.Session;
+import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
+
+
+
+
+public class MusicDAOImplement extends HibernateDaoSupport implements MusicDAO {
+
+	@Override
+	public void add(Song song) {
+		getHibernateTemplate().setCheckWriteOperations(false);
+		getHibernateTemplate().saveOrUpdate(song);
+
+	}
+
+	@Override
+	public void update(Song song, String name) {
+		Session s = getSessionFactory().openSession();
+		s.setFlushMode(FlushMode.ALWAYS);
+//		song = (Song)s.load(Song.class, song.getId());
+		s.update(song);
+		s.flush();
+		s.close();
+
+	}
+
+	@Override
+	public void delete(Song song) {
+		Session s = getSessionFactory().openSession();
+		s.setFlushMode(FlushMode.ALWAYS);
+		s.delete(song);
+		s.flush();
+		s.close();
+	}
+
+	@Override
+	public Song findByName(String name) {
+
+		Song song = (Song) getHibernateTemplate().find("from Song where name=?", name).get(0);
+		
+		int b = song.getId();
+		Song c = getHibernateTemplate().get(Song.class, b);
+		return c;
+	}
+
+}

@@ -19,8 +19,7 @@
 	</property>
 	</bean> 
 
-
-
+		
 	<!--  <bean id="simpleServiceBean" class="com.javacodegeeks.snippets.enterprise.SimpleService">
 		<property name="name" value="Hello" />
 		<property name="id" value="12345" />

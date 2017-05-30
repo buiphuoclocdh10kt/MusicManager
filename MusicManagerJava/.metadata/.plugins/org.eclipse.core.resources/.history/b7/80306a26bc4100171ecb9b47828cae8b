@@ -1,0 +1,29 @@
+package model;
+@Service("songBo")
+public class SongBoImplement implements SongBo {
+
+	@Override
+	public void add(Song song) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(Song song) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Song song) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Song findById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

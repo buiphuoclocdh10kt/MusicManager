@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=MusicManager/C:\/Program Files\/Java\/jdk1.8.0_131\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1494324048128"/>
+<typeInfo handle="=MusicManager/lib\/spring\/spring-orm-4.1.7.RELEASE.jar&lt;org.springframework.orm.hibernate4.support(HibernateDaoSupport.class[HibernateDaoSupport" modifiers="1057" timestamp="1495446997895"/>
+<typeInfo handle="=MusicManager/lib\/spring\/spring-aop-4.1.7.RELEASE.jar&lt;org.springframework.aop(MethodBeforeAdvice.class[MethodBeforeAdvice" modifiers="1537" timestamp="1495446997052"/>
+<typeInfo handle="=HibernateExample/C:\/Program Files\/Java\/jdk1.8.0_131\/jre\/lib\/rt.jar&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1494324048128"/>
+</typeInfoHistroy>

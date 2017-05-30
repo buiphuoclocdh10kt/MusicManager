@@ -1,0 +1,36 @@
+package model;
+
+public class MusicServiceImplement implements MusicService {
+	
+	
+	MusicDAO musicDao;
+	
+
+	public void setSongDao(MusicDAO songDao) {
+		this.musicDao = songDao;
+	}
+
+	@Override
+	public void add(Song song) {
+		musicDao.add(song);
+
+	}
+
+	@Override
+	public void update(Song song, String name) {
+		musicDao.update(song,name);
+
+	}
+
+	@Override
+	public void delete(Song song) {
+		musicDao.delete(song);
+
+	}
+
+	@Override
+	public Song findByName(String name) {
+		return musicDao.findByName(name);
+	}
+
+}

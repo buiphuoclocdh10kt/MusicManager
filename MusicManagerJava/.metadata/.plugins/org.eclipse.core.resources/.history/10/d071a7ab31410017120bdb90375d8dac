@@ -1,0 +1,26 @@
+package main;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service("employeeService")
+public class EmployeeService {
+	@Autowired
+	Employee employee;
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	public String printDetail() {
+		return employee.showDetail();
+	}
+	public void checkName() {
+		employee.checkName();
+	}
+
+	public void sayHello(String message){
+		employee.sayHello(message);
+	}
+
+}

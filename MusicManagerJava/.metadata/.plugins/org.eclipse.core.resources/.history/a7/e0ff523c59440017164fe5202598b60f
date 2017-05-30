@@ -1,0 +1,44 @@
+package model;
+
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+
+import model.CustomHibernateDaoSupport;
+
+
+public class SongDaoImplement extends CustomHibernateDaoSupport implements SongDao {
+
+	@Override
+	public void add(Song song) {
+		getHibernateTemplate().setCheckWriteOperations(false);
+		getHibernateTemplate().saveOrUpdate(song);
+
+	}
+
+	@Override
+	public void update(Song song) {
+		getHibernateTemplate().setCheckWriteOperations(false);
+		getHibernateTemplate().update(song);
+
+	}
+
+	@Override
+	public void delete(Song song) {
+		getHibernateTemplate().setCheckWriteOperations(false);
+		getHibernateTemplate().delete(song);
+
+	}
+
+	@Override
+	public Song findByName(String name) {
+		
+		List list = getHibernateTemplate().find(
+                "from Song where name=?",name);
+	return (Song)  list.get(0);
+	}
+
+}

@@ -1,0 +1,62 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<!-- Database Configuration -->
+
+
+	<!-- Auto scan the components -->
+	
+		
+	<bean id="loggingService" class="model.LoggingService" />
+	<import resource="DataSource.xml"/>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    <property name="dataSource">
+      <ref bean="dataSource"/>
+    </property>
+    <property name="annotatedClasses">
+	<list>
+		<value>model.Song</value>
+	</list>
+    </property>
+    <property name="hibernateProperties">
+       <props>
+         
+         <prop key="hibernate.show_sql">true</prop>
+       </props>
+    </property>
+    </bean>
+    
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"> 
+     <property name="sessionFactory" ref="sessionFactory" /> 
+	</bean> 
+    
+	<bean id="musicDAOImplement" class="model.MusicDAOImplement">
+	<property name="sessionFactory">
+	<ref bean="sessionFactory"/>
+	</property>
+	</bean>
+
+	<bean id="musicServiceImplement" class="model.MusicServiceImplement" >
+	<property name="songDao">
+	<ref bean="musicDAOImplement"/>
+	</property>
+	</bean> 
+	
+
+	<bean id="simpleServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="musicServiceImplement" />
+		<property name="interceptorNames">
+			<list>
+				<value>LoggingService</value>
+				
+			</list>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,41 @@
+package model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+//@Service("songBo")
+public class SongBoImplement implements SongBo {
+	
+	
+	SongDao songDao;
+	
+
+	public void setSongDao(SongDao songDao) {
+		this.songDao = songDao;
+	}
+
+	@Override
+	public void add(Song song) {
+		songDao.add(song);
+
+	}
+
+	@Override
+	public void update(Song song) {
+		songDao.update(song);
+
+	}
+
+	@Override
+	public void delete(Song song) {
+		songDao.delete(song);
+
+	}
+
+	@Override
+	public void findByName(String name) {
+		songDao.findByName(name);
+	}
+
+}
