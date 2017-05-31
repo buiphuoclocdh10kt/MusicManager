@@ -27,8 +27,13 @@ public class MusicServiceImplement implements MusicService {
 	}
 
 	@Override
-	public Song findByName(String name) {
-		return musicDao.findByName(name);
+	public void search(String name) {
+		musicDao.search(name);
+	}
+	
+	@Override
+	public Song findById(int id) {
+		return musicDao.findById(id);
 	}
 
 }

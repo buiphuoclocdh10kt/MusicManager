@@ -26,30 +26,30 @@ public class MusicDAOImplementTest {
 		song.setDate(currentTime);
 		musicService.add(song);
 
-		Song song2 = musicService.findByName("Trả Lại Thời Gian");
-		// assertNotNull(song2);
-		assertTrue(song2.equals(song));
+		Song song2 = musicService.findById(song.getId());
+		assertNotNull(song2);
+//		assertTrue(song2.equals(song));
 
 	}
 
 	@Test
 	public void testUpdate() {
-		Song song = musicService.findByName("Trả Lại Thời Gian");
+		Song song = musicService.findById(79);
 		song.setName("Khác Như Tôi");
 		song.setAuthor("Đức Huy");
 		song.setDate(currentTime);
 		musicService.update(song);
 
-		Song song2 = musicService.findByName("Khác Như Tôi");
-		assertNotNull(song2);
+		Song song2 = musicService.findById(song.getId());
+		assertTrue(song2.getName().equals("Khác Như Tôi"));
 	}
 
 	@Test
 	public void testDelete() {
-		Song song = musicService.findByName("Khác Như Tôi");
+		Song song = musicService.findById(80);
 		musicService.delete(song);
-		Song song2 = musicService.findByName("Khác Như Tôi");
-		assertNull(song2);
+		Song song2 = musicService.findById(song.getId());
+			assertNull(song2);
 	}
 
 }

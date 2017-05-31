@@ -14,12 +14,12 @@ public class LoggingService implements MethodBeforeAdvice {
 		Calendar calendar = Calendar.getInstance();
 		Date currentTime = calendar.getTime();
 		
-		if(arg0.getName()!="findByName"){
-			Song song=(Song)arg1[0];
-			System.out.println("Logging: "+arg0.getName()+" Song: \nName: "+song.getName()+"\nAuthor: "+song.getAuthor()+"\nDate: "+currentTime);
-		}
-			
+		
+		
 
+				if(arg1[0]!=null&&arg0.getName()!="findById"){
+				Song song=(Song)arg1[0];
+				System.out.println("Running Method: "+arg0.getName()+" \n\tName: "+song.getName()+"\n\tAuthor: "+song.getAuthor()+"\n\tDate: "+currentTime);}
 	}
 
 }

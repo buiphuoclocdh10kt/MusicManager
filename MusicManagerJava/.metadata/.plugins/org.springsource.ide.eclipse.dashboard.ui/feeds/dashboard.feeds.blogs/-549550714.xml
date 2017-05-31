@@ -5,7 +5,32 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-05-29T19:33:00Z</updated>
+  <updated>2017-05-30T20:20:54Z</updated>
+  <entry>
+    <title>This Week in Spring  - May 30th, 2017</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/05/30/this-week-in-spring-may-30th-2017" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-05-30:2935</id>
+    <updated>2017-05-30T20:20:54Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! This week I&amp;rsquo;m in Chicago for the epic &lt;a href="http://springdays.io/"&gt;Spring Days Chicago&lt;/a&gt; and then I&amp;rsquo;m off to Singapore for &lt;a href="https://voxxeddays.com/singapore/"&gt;VOXXED Singapore&lt;/a&gt;. We&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Security ninja Joe Grandja has just announced &lt;a href="https://spring.io/blog/2017/05/29/spring-security-oauth-2-1-1-and-2-0-14-released"&gt;the new Spring Security OAuth 2.1.1 and 2.0.4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Data Flow engineer Gunnar Hillert just &lt;a href="https://spring.io/blog/2017/05/25/spring-cloud-data-flow-1-2-1-released"&gt;announced Spring Cloud Data Flow 1.2.1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Cloud co-founder Spencer Gibb &lt;a href="https://spring.io/blog/2017/05/24/spring-cloud-dalston-sr1"&gt;just announced Spring Cloud Dalston SR1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I liked Jonas Hecht&amp;rsquo;s post looking at how &lt;a href="https://blog.codecentric.de/en/2017/05/ansible-docker-windows-containers-scaling-spring-cloud-netflix-docker-compose/"&gt;to run Spring Boot on Docker Windows&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I loved this post from RedHat engineer Sébastien Blanc on &lt;a href="https://developers.redhat.com/blog/2017/05/25/easily-secure-your-spring-boot-applications-with-keycloak/"&gt;using Keycloak, their OAuth-aware identity provider, with Spring Boot applications&lt;/a&gt;. Keycloak is also supported on &lt;a href="http://start.spring.io"&gt;the Spring Initializr&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The Docker blog also has a nice post by Sophia Parafina on &lt;a href="https://blog.docker.com/2017/05/spring-boot-development-docker/"&gt;running a Spring Boot application in a Docker container&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The Pivotal engineering blog has a nice post by Ian Fisher on &lt;a href="http://engineering.pivotal.io/post/must-know-spring-boot-annotations-controllers/"&gt;the must-know Spring Boot annotations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the IBM DeveloperWorks blog has a &lt;a href="https://developer.ibm.com/dwblog/2017/spring-boot/"&gt;nice post on building Spring Boot applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I really liked this post by Aboullaite Mohammed on &lt;a href="https://aboullaite.me/an-introduction-to-spring-boot-actuator/"&gt;using the Spring Boot Actuator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;the &lt;em&gt;MemoryNotFound&lt;/em&gt; blog has a nice post on using &lt;a href="http://memorynotfound.com/spring-boot-configurationproperties-annotation-example/"&gt;the &lt;code&gt;@ConfigurationProperties&lt;/code&gt; annotation&lt;/a&gt; in a Spring Boot application.&lt;/li&gt;
+  &lt;li&gt;Grygoriy Gonchar looks at the implications for doing reactive JDBC (even if it&amp;rsquo;s just a facade around fundamentally blocking APIs) &lt;a href="https://dzone.com/articles/spring-5-webflux-and-jdbc-to-block-or-not-to-block"&gt;with Spring 5&amp;rsquo;s Reactor support&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;All and Sundry&lt;/em&gt; blog &lt;a href="http://www.java-allandsundry.com/2017/05/ratio-based-routing-to-legacy-and.html"&gt;has a nice look at writing a ratio-aware proxy using Spring Cloud Netflix Zuul to ease the migration to a new service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Security OAuth 2.1.1 and 2.0.14 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2017/05/29/spring-security-oauth-2-1-1-and-2-0-14-released" />
@@ -1039,29 +1064,5 @@ WebFilter springSecurityFilterChain(ReactiveAuthenticationManager manager) {&#xD
   &lt;li&gt;Spring Cloud Contract &lt;a href="https://github.com/spring-cloud/spring-cloud-contract/milestone/11?closed=1"&gt;1.0.5.RELEASE&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;And, as always, we welcome feedback: either on &lt;a href="https://github.com/spring-cloud"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;gitter&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 5.0 goes RC1</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/05/08/spring-framework-5-0-goes-rc1" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Juergen Hoeller</name>
-    </author>
-    <id>tag:spring.io,2017-05-08:2917</id>
-    <updated>2017-05-08T10:33:00Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring community,&lt;/p&gt;
-&lt;p&gt;It is my pleasure to announce that a feature-complete Spring Framework 5.0 release candidate is &lt;a href="http://projects.spring.io/spring-framework/"&gt;available&lt;/a&gt; now! We are expecting a further release candidate at the end of May and a final release in late June at this point.&lt;/p&gt;
-&lt;p&gt;As a major revision of the core framework, 5.0 RC1 comes with a Java 8+ baseline and many infrastructure refinements: e.g. our own Commons Logging bridge autodetecting Log4j 2, SLF4J, JUL by default; streamlined use of Servlet 3.1+; and early support for JUnit 5.0 M4.&lt;/p&gt;
-&lt;p&gt;Once again, here are the major Spring Framework 5 feature themes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;b&gt;Reactive programming:&lt;/b&gt; introducing our &lt;a href="https://spring.io/blog/2017/02/23/spring-framework-5-0-m5-update"&gt;Spring WebFlux&lt;/a&gt; framework built on Reactor 3.1, with support for RxJava 1.3 &amp;amp; 2.1 and running on Tomcat, Jetty, Netty or Undertow.&lt;/li&gt;
-  &lt;li&gt;&lt;b&gt;Functional style with Java 8 &amp;amp; Kotlin:&lt;/b&gt; several API refinements and Kotlin extensions across the framework, in particular for &lt;a href="https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0"&gt;bean registration and functional web endpoints&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;b&gt;Integration with Java EE 8 APIs:&lt;/b&gt; support for Servlet 4.0, Bean Validation 2.0, JPA 2.2, as well as the JSON Binding API (as an alternative to Jackson/Gson in Spring MVC).&lt;/li&gt;
-  &lt;li&gt;&lt;b&gt;Ready for JDK 9:&lt;/b&gt; fully aligned with JDK 9 at runtime, on the classpath as well as the module path (on the latter: as filename-based &amp;ldquo;automatic modules&amp;rdquo; for the time being).&lt;/li&gt;
-  &lt;li&gt;And of course, many further refinements across the framework: check out our updated &lt;a href="https://github.com/spring-projects/spring-framework/wiki/What's-New-in-the-Spring-Framework#whats-new-in-spring-framework-5x"&gt;What&amp;rsquo;s New&lt;/a&gt; page for a comprehensive overview of changes since 4.3.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Cheers,&lt;br/&gt;Juergen&lt;/p&gt;
-&lt;p&gt;P.S.:&lt;br/&gt;For some background on Spring 5&amp;rsquo;s reactive programming story with Project Reactor and its Reactive Streams foundation, I highly recommend Rossen&amp;rsquo;s recent &lt;a href="https://www.infoq.com/podcasts/rossen-stoyanchev"&gt;InfoQ podcast&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Also, stay tuned for the first &lt;b&gt;Spring Boot 2.0 milestone&lt;/b&gt;, due early next week, building on Spring Framework 5.0 RC1 and a couple of portfolio releases to happen in the meantime&amp;hellip;&lt;/p&gt;</content>
   </entry>
 </feed>

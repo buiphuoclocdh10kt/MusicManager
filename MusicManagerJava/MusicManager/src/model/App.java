@@ -20,23 +20,30 @@ public class App {
 		/** insert **/
 		Calendar calendar = Calendar.getInstance();
 		Date currentTime = calendar.getTime();
+		
 
-		Song song = new Song();
-		song.setName("Trả Lại Thời Gian");
-		song.setAuthor("Thanh Sơn");
-		song.setDate(currentTime);
-		musicService.add(song);
-
-//		Song song = musicService.findByName("Giống Như Tôi");
-//		System.out.println(song);
-//		song.setName("Khác Như Tôi");
-//		song.setAuthor("Đức Huy");
+//		Song song = new Song();
+//		song.setName("Trả Lại Thời Gian");
+//		song.setAuthor("Thanh Sơn");
 //		song.setDate(currentTime);
-//		musicService.update(song);
+//		musicService.add(song);
 
-		// musicService.delete(song);
+		Song song = musicService.findById(72);
+		if(song!=null){
+			System.out.println(song);
+			song.setName("Khác Như Tôi");
+			song.setAuthor("Đức Huy");
+			song.setDate(currentTime);
+			musicService.update(song);
+		}
+		else{
+			System.out.println("The Song doesn't exits!");
+		}
+		
 
-		System.out.println("Done");
+//		 musicService.delete(song);
+
+		System.out.println("Program finish!");
 
 	}
 

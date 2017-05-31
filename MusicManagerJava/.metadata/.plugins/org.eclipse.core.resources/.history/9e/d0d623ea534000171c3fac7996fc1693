@@ -1,5 +1,0 @@
-import org.springframework.aop.MethodBeforeAdvice;
-
-public class DoBeforeMethod implements MethodBeforeAdvice {
-
-}

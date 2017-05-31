@@ -33,11 +33,14 @@
 <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.EnableAspectJAutoProxy"/>
 <fullyQualifiedTypeName name="model.Song"/>
 <fullyQualifiedTypeName name="org.springframework.orm.hibernate4.support.HibernateDaoSupport"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.aop.AfterReturningAdvice"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.lang.ClassCastException"/>
 </qualifiedTypeNameHistroy>

@@ -7,6 +7,8 @@ public interface MusicDAO {
 
 	public void delete(Song song);
 
-	public Song findByName(String name);
+	public void search(String name);
+	
+	public Song findById(int id);
 
 }
