@@ -1,0 +1,23 @@
+package service;
+
+public class Service {
+	private String a;
+
+	public String getA() {
+		return a;
+	}
+
+	public void setA(String a) {
+		this.a = a;
+	}
+	public void printString(String a) {
+		System.out.println("String : " + a);
+	}
+	public void printString2(String a) {
+		System.out.println("String : " + a+"String : " + a);
+	}
+	public void throwExceptionAdvice() throws Exception {
+		throw new Exception("Generic Error");
+	}
+
+}

@@ -1,0 +1,7 @@
+package demo;
+
+import org.springframework.aop.ThrowsAdvice;
+
+public class DoAfterThrowingMethod implements ThrowsAdvice {
+
+}

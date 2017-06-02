@@ -7,14 +7,12 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
 	<!-- Database Configuration -->
-
+	<import resource="DataSource.xml"/>
 
 	<!-- Auto scan the components -->
-	
-		
-	<bean id="loggingService" class="model.LoggingService" />
-	<import resource="DataSource.xml"/>
-	
+
+	<bean id="loggingService" class="service.LoggingService" />
+
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
     <property name="dataSource">
       <ref bean="dataSource"/>
@@ -36,13 +34,13 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd">
      <property name="sessionFactory" ref="sessionFactory" /> 
 	</bean> 
     
-	<bean id="musicDAOImplement" class="model.MusicDAOImplement">
+	<bean id="musicDAOImplement" class="dao.MusicDAOImplement">
 	<property name="sessionFactory">
 	<ref bean="sessionFactory"/>
 	</property>
 	</bean>
 
-	<bean id="musicServiceImplement" class="model.MusicServiceImplement" >
+	<bean id="musicServiceImplement" class="service.MusicServiceImplement" >
 	<property name="songDao">
 	<ref bean="musicDAOImplement"/>
 	</property>

@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="service" class="demo.Service"></bean>
+	<bean id="doBeforeMethod" class="demo.DoBeforeMethod"></bean>
+	<bean id="doAfterReturningMethod" class="demo.DoAfterReturningMethod"></bean>
+	<bean id="doAfterThrowingMethod" class="demo.DoAfterThrowingMethod"></bean>
+	<bean id="doAroundMethod" class="demo.DoAroundMethod"></bean>
+	
+	
+	<bean id="serviceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="service" />
+		<property name="interceptorNames">
+			<list>
+				<value>doBeforeMethod</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="serviceProxy2" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="service" />
+		<property name="interceptorNames">
+			<list>
+				<value>doAfterReturningMethod</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="serviceProxy3" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="service" />
+		<property name="interceptorNames">
+			<list>
+				<value>doAfterThrowingMethod</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="serviceProxy4" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="service" />
+		<property name="interceptorNames">
+			<list>
+				<value>doAroundMethod</value>
+			</list>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,70 @@
+package main;
+
+
+import java.util.Calendar;
+import java.util.Date;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import model.Song;
+import service.MusicService;
+
+
+public class App {
+
+	public static void main(String[] args) {
+
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("BeanLocations.xml");
+
+		MusicService musicService = (MusicService) appContext.getBean("simpleServiceProxy");
+
+		/** insert **/
+		Calendar calendar = Calendar.getInstance();
+		Date currentTime = calendar.getTime();
+		
+
+		Song song = new Song();
+		try {
+			song.setName("Trả Lại Thời Gian");
+			song.setAuthor("Thanh Sơn");
+			song.setDate(currentTime);
+			musicService.add(song);
+			System.out.println("Added song: --"+song.getName()+"-- succeed!");
+		} catch (Exception e) {
+			System.out.println("The song existed!");
+		}
+
+		
+		
+		
+		
+//		Song song = musicService.findById(6);
+//		if(song!=null){
+//			System.out.println(song);
+//			song.setName("Khác Như Tôi");
+//			song.setAuthor("Đức Huy");
+//			song.setDate(currentTime);
+//			musicService.update(song);
+//			System.out.println("Modified succeed!");
+//		}
+//		else{
+//			System.out.println("The song doesn't exist!");
+//		}
+		
+		
+		
+		
+		
+//		Song song = musicService.findById(6);
+//		System.out.println(song);
+//		if(song!=null){
+//		musicService.delete(song);
+//		System.out.println("Deleted succeed!");
+//		}else{
+//			System.out.println("The song doesn't exist!");
+//		}
+
+	}
+
+}

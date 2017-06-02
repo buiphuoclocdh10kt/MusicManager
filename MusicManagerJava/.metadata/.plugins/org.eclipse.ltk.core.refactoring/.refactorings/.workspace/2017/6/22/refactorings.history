@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;AOPDemo&apos; to &apos;AOPConfigurationXML&apos;&#x0D;&#x0A;- Original element: &apos;AOPDemo&apos;&#x0D;&#x0A;- Renamed element: &apos;AOPDemo&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;AOPDemo&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=AOPDemo" name="AOPConfigurationXML" references="true" stamp="1496303161316" version="1.0"/>
+</session>

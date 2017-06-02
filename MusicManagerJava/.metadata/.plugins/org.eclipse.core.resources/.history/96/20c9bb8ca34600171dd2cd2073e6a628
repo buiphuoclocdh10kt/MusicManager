@@ -1,0 +1,21 @@
+package demo;
+
+public class Service {
+	private String a;
+
+	public String getA() {
+		return a;
+	}
+
+	public void setA(String a) {
+		this.a = a;
+	}
+	public void printString(String a) {
+		System.out.println("String : " + a);
+	}
+	public void throwExceptionAdvice() throws Exception {
+		System.out.println("addCustomerThrowException() is running ");
+		throw new Exception("Generic Error");
+	}
+
+}
