@@ -12,7 +12,7 @@ public class MainClass {
 
 		Service service = (Service) appContext.getBean("before");
 		service.printString("Hello World!");
-		service.printString2("Hello");
+		service.printString("Hello");
 		
 		
 		

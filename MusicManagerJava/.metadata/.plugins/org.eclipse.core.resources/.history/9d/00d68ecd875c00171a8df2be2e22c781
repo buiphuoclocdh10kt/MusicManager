@@ -1,0 +1,15 @@
+package dao;
+
+import java.util.List;
+
+import config.Song;
+
+public interface SessionDAO {
+
+	boolean isLogIn(String ip);
+
+	int getUserId(String ip);
+
+	List<Song> logIn(String accountUser, String passwordUser);
+
+}

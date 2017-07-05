@@ -1,0 +1,18 @@
+package main;
+import java.util.Calendar;
+import java.util.Date;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import model.Song;
+import service.MusicService;
+@SpringBootApplication
+public class App {
+
+	public static void main(String[] args) {
+		SpringApplication.run(App.class, args);
+
+		
+
+	}
+
+}

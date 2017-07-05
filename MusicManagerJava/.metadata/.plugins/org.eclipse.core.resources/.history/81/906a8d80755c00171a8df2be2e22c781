@@ -1,0 +1,78 @@
+package service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import config.Song;
+import config.Users;
+import dao.MusicDAO;
+
+
+
+public class MusicServiceImplement implements MusicService {
+	@Autowired
+	MusicDAO musicDao;
+
+	public void setSongDao(MusicDAO songDao) {
+		this.musicDao = songDao;
+	}
+
+	@Override
+	public void add(Song song) {
+		musicDao.add(song);
+
+	}
+
+	@Override
+	public void update(Song song) {
+		musicDao.update(song);
+
+	}
+
+	@Override
+	public void delete(Song song) {
+		musicDao.delete(song);
+
+	}
+
+	@Override
+	public List search(String name) {
+		return musicDao.search(name);
+	}
+	
+	@Override
+	public Song findById(int id) {
+		return musicDao.findById(id);
+	}
+
+	@Override
+	public List select() {
+		return musicDao.select();
+	}
+	
+	@Override
+	public List getUser() {
+		return musicDao.getUser();
+	}
+
+	@Override
+	public Users findUserByName(String name) {
+		return musicDao.findUserByName(name);
+	}
+	
+	@Override
+	public List selectByUser(int id) {
+		return musicDao.selectByUser(id);
+	}
+	
+	@Override
+	public List<Song> logIn(String accountUser, String passwordUser) {
+		return musicDao.logIn(accountUser, passwordUser);
+	}
+	
+
+}

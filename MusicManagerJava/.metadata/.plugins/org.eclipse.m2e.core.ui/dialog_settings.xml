@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="480" key="width"/>
+		<item value="720" key="x"/>
+		<item value="167" key="y"/>
+		<item value="530" key="height"/>
+	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="NewExample"/>
 			<item value="ExampleIOC"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="NewExample"/>
 			<item value="ExampleIOC"/>
 		</list>
 		<list key="version">

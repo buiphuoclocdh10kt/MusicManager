@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SongMusic.hbm.xml&apos; to &apos;NewExample/src/main/java/hello&apos;&#x0D;&#x0A;- Original project: &apos;HibernateExample&apos;&#x0D;&#x0A;- Destination element: &apos;NewExample/src/main/java/hello&apos;&#x0D;&#x0A;- Original element: &apos;SongMusic.hbm.xml&apos;" description="Copy file" destination="=NewExample/src\/main\/java&lt;hello" element1="src/SongMusic.hbm.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1497925425136" units="0" version="1.0"/>
+</session>

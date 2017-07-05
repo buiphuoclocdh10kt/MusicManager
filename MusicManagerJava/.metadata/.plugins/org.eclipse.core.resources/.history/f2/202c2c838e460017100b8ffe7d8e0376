@@ -1,7 +1,0 @@
-package demo;
-
-import org.springframework.aop.AfterAdvice;
-
-public class DoAfterMothod implements MethodAfterAdvice {
-
-}

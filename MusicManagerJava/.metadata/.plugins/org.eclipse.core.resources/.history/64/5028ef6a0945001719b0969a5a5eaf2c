@@ -1,9 +1,0 @@
-package model;
-
-public interface MusicDAO {
-	public void add(Song song);
-	public void delete(Song song);
-	public Song findByName(String name);
-	public void update(Song song, String name);
-
-}

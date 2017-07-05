@@ -1,0 +1,20 @@
+package service;
+
+import java.util.List;
+
+import config.Song;
+import config.Users;
+
+
+
+public interface MusicService {
+	public void add(Song song);
+
+	public void update(Song song);
+
+	public void delete(Song song);
+
+	public List<Song> search(String name);
+	
+	public Song findById(int id);
+}

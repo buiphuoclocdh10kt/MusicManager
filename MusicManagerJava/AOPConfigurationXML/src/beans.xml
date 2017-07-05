@@ -16,6 +16,8 @@
 		<property name="interceptorNames">
 			<list>
 				<value>doBeforeMethod</value>
+				<value>doAfterReturningMethod</value>
+				<value>doAroundMethod</value>
 			</list>
 		</property>
 	</bean>

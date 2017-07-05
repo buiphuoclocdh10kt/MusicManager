@@ -1,0 +1,25 @@
+package hello;
+
+import java.lang.reflect.Method;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.aop.MethodBeforeAdvice;
+
+
+public class LoggingService implements MethodBeforeAdvice {
+
+	@Override
+	public void before(Method arg0, Object[] arg1, Object arg2) throws Throwable {
+		
+		Calendar calendar = Calendar.getInstance();
+		Date currentTime = calendar.getTime();
+		
+		if(arg1.length!=0&&arg1[0]!=null&&arg0.getName()!="findById"&&arg0.getName()!="a"){
+		Song song=(Song)arg1[0];
+		System.out.println("Running Method: "+arg0.getName()+" \n\tName: "+song.getName()+"\n\tAuthor: "+song.getAuthor()+"\n\tDate: "+currentTime);}
+	}
+}

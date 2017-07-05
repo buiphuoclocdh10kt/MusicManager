@@ -1,9 +1,0 @@
-package model;
-import model.Song;
-public interface SongDao {
-	public void add(Song song);
-	public void update(Song song);
-	public void delete(Song song);
-	public Song findByName(String name);
-
-}

@@ -1,0 +1,94 @@
+package dao;
+
+import java.util.List;
+
+import org.hibernate.FlushMode;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.springframework.dao.DataAccessException;
+import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
+
+import model.Song;
+
+public class MusicDAOImplement extends HibernateDaoSupport implements MusicDAO {
+
+	@Override
+	public void add(Song song) {
+		Session s = getSessionFactory().openSession();
+		try {
+			s.setFlushMode(FlushMode.ALWAYS);
+			s.saveOrUpdate(song);
+			s.flush();
+
+		} catch (HibernateException | DataAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			s.close();
+		}
+	}
+
+	@Override
+	public void update(Song song) {
+
+		Session s = getSessionFactory().openSession();
+		try {
+			if (song != null) {
+
+				s.setFlushMode(FlushMode.ALWAYS);
+				s.update(song);
+				s.flush();
+			}
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			s.close();
+		}
+
+	}
+
+	@Override
+	public void delete(Song song) {
+
+		Session s = getSessionFactory().openSession();
+		try {
+			if (song != null) {
+				s.setFlushMode(FlushMode.ALWAYS);
+				s.delete(song);
+				s.flush();
+			}
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		finally {
+			s.close();
+		}
+
+	}
+
+	@Override
+	public void search(String name) {
+
+		try {
+			List list = getHibernateTemplate().find("from Song where name=?", name);
+
+		} catch (DataAccessException | IndexOutOfBoundsException e) {
+			// TODO Auto-generated catch block
+
+		}
+	}
+
+	@Override
+	public Song findById(int id) {
+
+		Song song = (Song) getHibernateTemplate().get(Song.class, id);
+		if (song != null)
+			return song;
+		else
+			return null;
+	}
+
+}

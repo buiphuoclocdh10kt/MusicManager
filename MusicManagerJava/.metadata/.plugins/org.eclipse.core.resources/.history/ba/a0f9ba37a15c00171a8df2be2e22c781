@@ -1,0 +1,16 @@
+package dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
+
+import config.Sessions;
+import config.Song;
+import config.Users;
+
+public class SessionServiceImplement extends HibernateDaoSupport implements SessionDAO {
+	
+	
+
+}

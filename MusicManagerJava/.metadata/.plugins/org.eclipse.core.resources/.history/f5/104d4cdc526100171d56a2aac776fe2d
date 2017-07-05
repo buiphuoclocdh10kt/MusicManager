@@ -1,0 +1,13 @@
+package config;
+
+import org.springframework.boot.autoconfigure.jersey.ResourceConfigCustomizer;
+
+public class SSEApplication implements ResourceConfigCustomizer {
+
+	@Override
+	public void customize(ResourceConfig config) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

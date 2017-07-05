@@ -12,15 +12,15 @@ public class MainClass {
 
 		Service service = (Service) appContext.getBean("service");
 		service.printString("Hello World!");
-		service.printString("Bye!");
+		service.printString2("Bye!");
 		
 		
-//			try {
-//				service.throwExceptionAdvice();
-//			} catch (Exception e) {
-//				
-//				
-//			}
+			try {
+				service.throwExceptionAdvice();
+			} catch (Exception e) {
+				
+				
+			}
 
 	}
 

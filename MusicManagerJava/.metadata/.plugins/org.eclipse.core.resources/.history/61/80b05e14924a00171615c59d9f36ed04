@@ -1,0 +1,39 @@
+package main;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import model.Song;
+import service.MusicService;
+@SpringBootApplication
+public class App {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(App.class, args);
+
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("BeanLocations.xml");
+
+		MusicService musicService = (MusicService) appContext.getBean("simpleServiceProxy");
+
+		/** insert **/
+		Calendar calendar = Calendar.getInstance();
+		Date currentTime = calendar.getTime();
+		Song song = new Song();
+		
+		try {
+			song.setName("Trả Lại Thời Gian");
+			song.setAuthor("Thanh Sơn");
+			song.setDate(currentTime);
+			musicService.add(song);
+			System.out.println("Added song: --"+song.getName()+"-- succeed!");
+		} catch (Exception e) {
+			System.out.println("The song existed!");
+		}
+
+	}
+
+}

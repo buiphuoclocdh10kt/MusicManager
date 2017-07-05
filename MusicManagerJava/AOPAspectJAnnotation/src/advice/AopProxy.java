@@ -15,7 +15,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Aspect
 public class AopProxy {
 
-	@Before("execution(* service.Service.printString(..))")
+	@Before("execution(* service.Service.*(..))")
 	public void before(JoinPoint joinPoint) {
 
 		System.out.println("TheBeforeAdvice is running!");

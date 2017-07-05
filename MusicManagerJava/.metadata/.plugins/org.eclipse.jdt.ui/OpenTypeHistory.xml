@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=MusicManager/C:\/Program Files\/Java\/jdk1.8.0_131\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1494324048128"/>
-<typeInfo handle="=MusicManager/lib\/spring\/spring-orm-4.1.7.RELEASE.jar&lt;org.springframework.orm.hibernate4.support(HibernateDaoSupport.class[HibernateDaoSupport" modifiers="1057" timestamp="1495446997895"/>
-<typeInfo handle="=MusicManager/lib\/spring\/spring-aop-4.1.7.RELEASE.jar&lt;org.springframework.aop(MethodBeforeAdvice.class[MethodBeforeAdvice" modifiers="1537" timestamp="1495446997052"/>
-<typeInfo handle="=HibernateExample/C:\/Program Files\/Java\/jdk1.8.0_131\/jre\/lib\/rt.jar&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1494324048128"/>
-<typeInfo handle="=AOPDemo/lib\/spring-aop-4.1.7.RELEASE.jar&lt;org.springframework.aop(BeforeAdvice.class[BeforeAdvice" modifiers="1537" timestamp="1495446997052"/>
-<typeInfo handle="=AOPDemo/lib\/spring-aop-4.1.7.RELEASE.jar&lt;org.springframework.aop(MethodBeforeAdvice.class[MethodBeforeAdvice" modifiers="1537" timestamp="1495446997052"/>
-<typeInfo handle="=AOPDemo/lib\/spring-aop-4.1.7.RELEASE.jar&lt;org.springframework.aop(AfterAdvice.class[AfterAdvice" modifiers="1537" timestamp="1495446997052"/>
-<typeInfo handle="=AOPDemo/lib\/spring-aop-4.1.7.RELEASE.jar&lt;org.springframework.aop(AfterReturningAdvice.class[AfterReturningAdvice" modifiers="1537" timestamp="1495446997052"/>
-<typeInfo handle="=AOPDemo/lib\/hibernate-core-4.1.7.Final.jar&lt;org.hibernate.engine.transaction.synchronization.spi(AfterCompletionAction.class[AfterCompletionAction" modifiers="1537" timestamp="1346920202000"/>
-<typeInfo handle="=AOPDemo/lib\/spring-aop-4.1.7.RELEASE.jar&lt;org.springframework.aop(ThrowsAdvice.class[ThrowsAdvice" modifiers="1537" timestamp="1495446997052"/>
-<typeInfo handle="=AOPDemo/lib\/aopalliance-1.0.jar&lt;org.aopalliance.intercept(MethodInterceptor.class[MethodInterceptor" modifiers="1537" timestamp="1495614241463"/>
+<typeInfo handle="=NewExample/C:\/Program Files\/Java\/jdk1.8.0_131\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1494324048128"/>
+<typeInfo handle="=NewExample/C:\/Users\/bploc\/.gradle\/caches\/modules-2\/files-2.1\/org.apache.tomcat.embed\/tomcat-embed-core\/8.5.11\/72761f51fc7cef3ee19d4aafc7adc605df9f611f\/tomcat-embed-core-8.5.11.jar&lt;javax.servlet(SessionCookieConfig.class[SessionCookieConfig" modifiers="1537" timestamp="1496716043352"/>
 </typeInfoHistroy>

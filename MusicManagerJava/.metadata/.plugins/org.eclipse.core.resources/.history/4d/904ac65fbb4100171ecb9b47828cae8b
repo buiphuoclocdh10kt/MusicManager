@@ -1,9 +1,0 @@
-package model;
-
-public class SongBoImplement implements SongBo {
-
-	public SongBoImplement() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

@@ -5,6 +5,8 @@
 		<item value="400" key="height"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="moveWizard.updateQualifiedNames"/>
+		<item value="*" key="patterns"/>
 	</section>
 	<section name="RefactoringStatusDialog">
 		<item value="816" key="DIALOG_WIDTH"/>
@@ -14,5 +16,12 @@
 	<section name="RefactoringWizard.Extract Superclass">
 		<item value="600" key="width"/>
 		<item value="416" key="height"/>
+	</section>
+	<section name="InferTypeArguments">
+		<item value="true" key="leaveUnconstrainedRaw"/>
+		<item value="true" key="assumeCloneReturnsSameType"/>
+	</section>
+	<section name="RefactoringPropertyPage">
+		<item value="true" key="org.eclipse.ltk.ui.refactoring.sortRefactorings"/>
 	</section>
 </section>

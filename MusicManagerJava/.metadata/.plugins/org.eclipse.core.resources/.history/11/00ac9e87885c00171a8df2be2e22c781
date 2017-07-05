@@ -1,0 +1,17 @@
+package service;
+
+import java.util.List;
+
+import config.Song;
+
+public interface SessionService {
+	
+	public List<Song> selectSongByUserId(int idUser);
+	
+	public List<Song> logIn(String accountUser, String passwordUser);
+	
+	public boolean isLogIn(String ip);
+	
+	public int getUserId(String ip)
+
+}

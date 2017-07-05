@@ -1,0 +1,35 @@
+package service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import config.Song;
+import config.Users;
+import dao.SessionDAO;
+
+public class SessionServiceImplement implements SessionService {
+	@Autowired
+	SessionDAO sessionDao;
+
+	@Override
+	public List selectSongByUserId(int idUser) {
+		return sessionDao.selectSongByUserId(idUser);
+	}
+	
+	@Override
+	public List<Song> logIn(String accountUser, String passwordUser) {
+		return musicDao.logIn(accountUser, passwordUser);
+	}
+
+	@Override
+	public boolean isLogIn(String ip) {
+		return musicDao.isLogIn(ip);
+	}
+
+	@Override
+	public int getUserId(String ip) {
+		return musicDao.getUserId(ip);
+	}
+
+}

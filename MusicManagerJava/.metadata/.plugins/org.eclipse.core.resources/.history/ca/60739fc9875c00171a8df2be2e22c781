@@ -1,0 +1,9 @@
+package dao;
+
+public interface SessionDAO {
+
+	boolean isLogIn(String ip);
+
+	int getUserId(String ip);
+
+}
