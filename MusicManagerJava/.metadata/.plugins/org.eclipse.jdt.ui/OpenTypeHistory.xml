@@ -2,4 +2,5 @@
 <typeInfoHistroy>
 <typeInfo handle="=NewExample/C:\/Program Files\/Java\/jdk1.8.0_131\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1494324048128"/>
 <typeInfo handle="=NewExample/C:\/Users\/bploc\/.gradle\/caches\/modules-2\/files-2.1\/org.apache.tomcat.embed\/tomcat-embed-core\/8.5.11\/72761f51fc7cef3ee19d4aafc7adc605df9f611f\/tomcat-embed-core-8.5.11.jar&lt;javax.servlet(SessionCookieConfig.class[SessionCookieConfig" modifiers="1537" timestamp="1496716043352"/>
+<typeInfo handle="=NewExample/C:\/Users\/bploc\/.gradle\/caches\/modules-2\/files-2.1\/org.springframework.boot\/spring-boot-autoconfigure\/1.5.2.RELEASE\/8a9b8c747bc2c86eefde10330cb2984541bcb9d1\/spring-boot-autoconfigure-1.5.2.RELEASE.jar&lt;org.springframework.boot.autoconfigure.jersey(ResourceConfigCustomizer.class[ResourceConfigCustomizer" modifiers="1537" timestamp="1496715839539"/>
 </typeInfoHistroy>

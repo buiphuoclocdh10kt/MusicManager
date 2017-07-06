@@ -331,24 +331,22 @@ qx.Class.define("musicmanager.CustomWidget",
 		controlModel.setColumnIds(["id","name", "author","status"]);
 		controlModel.setColumnNamesByIndex(["ID","Name", "Author","Share"]);
 		controlModel.setDataAsMapArray(data);
+		
+		
 		this.tableSong.setTableModel(controlModel);
 		this.tableSong.setColumnWidth(1, 770);
 		this.tableSong.setColumnWidth(2, 719);
 		this.tableSong.setColumnWidth(3, 270);
 		this.tableSong.setHeight(850);
-	},
-	_onSuccess: function(e){
-		this.tableSong.getEmptyTableModel();
-		var data=e.getData();
-		var controlModel = new qx.ui.table.model.Simple();
-		controlModel.setColumnIds(["id","name", "author","status"]);
-		controlModel.setColumnNamesByIndex(["ID","Name", "Author","Share"]);
-		controlModel.setDataAsMapArray(data);
-		this.tableSong.setTableModel(controlModel);
-		this.tableSong.setColumnWidth(1, 770);
-		this.tableSong.setColumnWidth(2, 719);
-		this.tableSong.setColumnWidth(3, 270);
-		this.tableSong.setHeight(850);
+		var length = controlModel.getRowCount();
+		for(var i=1;i<length;i++){
+			if(controlModel.getRowData(i)[3]==true){
+				var newRenderer = new qx.ui.table.cellrenderer.Conditional("right", "", "", "");
+				newRenderer.addNumericCondition("==", "true",   null, "#87CEFA", null, null);
+				newRenderer.addNumericCondition("==", "false",   null, "#FF0000", null, null);
+				this.tableSong.getTableColumnModel().setDataCellRenderer(3, newRenderer);
+			}
+		}
 	},
 	_onCellTap: function(e){	
 		var index=this.tableSong.getFocusedRow();
@@ -419,7 +417,6 @@ qx.Class.define("musicmanager.CustomWidget",
   
   events : 
   {
-	"loadTable" : "qx.event.type.Event",
     "add" : "qx.event.type.Data",
 	"modify" : "qx.event.type.Data",
 	"delete" : "qx.event.type.Event",

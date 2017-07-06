@@ -38,7 +38,7 @@ qx.Class.define("musicmanager.CustomWidget",
 	this.buttonRefresh = this._createChildControl("buttonRefresh");
 	this.tableSong = this._createChildControl("tableSong");
 	
-	  //tableSong Listener
+	//tableSong Listener
 	this.songs.get();
 	this.songs.addListener("getSuccess", this._onGetSuccess, this);
 	this.tableSong.addListener("cellTap", this._onCellTap,this);
@@ -325,7 +325,6 @@ qx.Class.define("musicmanager.CustomWidget",
 		this.songs = this.getSongs();
 	},
 	_onGetSuccess: function(e){
-		this.tableSong.getEmptyTableModel();
 		var data=e.getData();
 		var controlModel = new qx.ui.table.model.Simple();
 		controlModel.setColumnIds(["id","name", "author","status"]);
@@ -336,19 +335,9 @@ qx.Class.define("musicmanager.CustomWidget",
 		this.tableSong.setColumnWidth(2, 719);
 		this.tableSong.setColumnWidth(3, 270);
 		this.tableSong.setHeight(850);
-	},
-	_onSuccess: function(e){
-		this.tableSong.getEmptyTableModel();
-		var data=e.getData();
-		var controlModel = new qx.ui.table.model.Simple();
-		controlModel.setColumnIds(["id","name", "author","status"]);
-		controlModel.setColumnNamesByIndex(["ID","Name", "Author","Share"]);
-		controlModel.setDataAsMapArray(data);
-		this.tableSong.setTableModel(controlModel);
-		this.tableSong.setColumnWidth(1, 770);
-		this.tableSong.setColumnWidth(2, 719);
-		this.tableSong.setColumnWidth(3, 270);
-		this.tableSong.setHeight(850);
+		var newRenderer = new qx.ui.table.cellrenderer.Conditional("left", "", "", "");
+		newRenderer.addNumericCondition("==", "1",   null, "#00FF00", null, null);
+		this.tableSong.getTableColumnModel().setDataCellRenderer(3, newRenderer);
 	},
 	_onCellTap: function(e){	
 		var index=this.tableSong.getFocusedRow();

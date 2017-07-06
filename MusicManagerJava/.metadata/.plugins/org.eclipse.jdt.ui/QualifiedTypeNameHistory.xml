@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
-<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.SpringBootApplication"/>
-<fullyQualifiedTypeName name="com.sun.glass.ui.Application"/>
-<fullyQualifiedTypeName name="javafx.application.Application"/>
 <fullyQualifiedTypeName name="service.MusicServiceImplement"/>
 <fullyQualifiedTypeName name="dao.MusicDAO"/>
 <fullyQualifiedTypeName name="dao.MusicDAOImplement"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="config.Sessions"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.method.annotation.SseEmitter"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+<fullyQualifiedTypeName name="java.time.LocalTime"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
 </qualifiedTypeNameHistroy>

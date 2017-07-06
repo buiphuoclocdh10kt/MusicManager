@@ -1,2 +1,0 @@
-spring.application.admin.enabled=false # Enable admin features for the application
-spring.application.admin.jmx-name=org.springframework.boot:type=Admin,name=SpringApplication # JMX name of the application admin MBean.

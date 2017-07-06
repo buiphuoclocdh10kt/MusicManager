@@ -101,15 +101,12 @@ qx.Class.define("musicmanager.Application",
 	},this);
 
     },
+	
 	_getSong: function(){
-		// Singular resource
 		var photo = new qx.io.rest.Resource({
 		isLogIn: {method: "GET",url: "http://localhost:8080/musicmanager/isLogIn"},
-		
 		logIn: {method: "POST",url: "http://localhost:8080/musicmanager/logIn?{logIn}"},
-		
 		logOut: {method: "POST",url: "http://localhost:8080/musicmanager/logOut"}	
-		
 		});
 		photo.configureRequest(function(req) {
 			req.setRequestHeader("Content-Type", "application/json");
@@ -120,15 +117,14 @@ qx.Class.define("musicmanager.Application",
 	initialize: function(){
 		this.song = this._getSong();
 	},
+	
 	_getMusicManagerUI: function(){
-		  
 		  this.root.add(this.bar, {left: 10, top: 5});
 		  this.view = new musicmanager.CustomWidget();
 		  this.root.add(this.view,{left:10, top: 45});
-		  
 	},
+	
 	_onLogIn: function(){
-		
 		var managerlogIn = new qx.ui.form.validation.Manager();
 		managerlogIn.add(this.textFieldAccount);
 		managerlogIn.add(this.textFieldPassword);
